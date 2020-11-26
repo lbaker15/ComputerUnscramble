@@ -32,8 +32,4 @@ def task1(texts):
 
 print("There are ",task1(texts), " different telephone numbers in the records.")
 
-"""
-Worst-Case Big-O Notation:
-Big O notation would be O(n) as the function loops the input meaning that complexity increases as the size of the size 
-of the input increases.
-"""
+

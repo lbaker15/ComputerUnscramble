@@ -1,0 +1,52 @@
+Task 0
+Big O notation would be O(1) as both the declarations and printed messages only need to run once despite whatever input
+is passed into the function.
+I implemented a constant notation so the runtime doesn't change despite the input
+
+Task 1
+Big O notation would be O(n) as the function includes one loop, meaning that complexity increases as the size of the size
+of the input increases.
+
+Task 2
+Function dialled
+Lines 1 constant time O(1)
+Lines 2-8 linear time O(n)
+Line 9 constant time O(1)
+Worst case = O(n + 2)
+Function received
+Lines 1 constant time O(1)
+Lines 2-8 linear time O(n)
+Line 9 constant time O(1)
+Worst case = O(n + 2)
+Function highest
+Lines 1 constant time O(1)
+Lines 2-8 linear time O(2n)
+Lines 9 constant time O(1)
+
+Task 3
+PART A
+Function filter
+Lines 1-2 constant time O(1) + O(1) = O(2)
+Lines 3- 12 linear time O(n)
+Line 13 linear time O(n)
+Line 14-15 linear time O(n)
+Worst case - O(3n + 2) = O(n)
+
+PART B
+Function filter
+Lines 1-2 constant time O(1) + O(1) = O(2)
+Lines 3-5 linear time O(n)
+Line 6 constant time O(1)
+Worst case - O(n + 3) = O(n)
+Function percentage
+Lines 1-3 constant time O(3)
+Lines 4-6 linear time O(n)
+Lines 7-9 constant time O(3)
+Worst case - O(n + 6) = O(n)
+
+Task4
+Function telemarketers
+Lines 1 constant time O(1)
+Lines 2 - 10 linear time, three loops therefore O(3n)
+Line 11 constant time O(1)
+Worst case O(3n + 2) = O(n)

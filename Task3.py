@@ -42,9 +42,11 @@ def filter(calls):
         if substring in x[0]:
             if x[1][0] == "(":
                 code = x[1].split(")")[0] + ")"
+            elif x[1][0:3] == 140:
+                code = 140
             else:
-                code = x[1][0] + x[1][1] + x[1][2]
-            if not code in arr:
+                code = x[1][0:4]
+            if code not in arr:
                 arr.append(code)
     arr.sort()
     for x in arr:

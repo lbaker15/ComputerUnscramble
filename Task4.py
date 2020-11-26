@@ -25,28 +25,21 @@ Print a message:
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
 """
 
-arr = []
-def receivedCalls(toMap):
-    for i in range(len(toMap)):
-        if calls[i][0] not in calls[i][1]:
-            if calls[i][0] not in arr:
-                arr.append(calls[i][0])
+def telemarketers():
+    callers = set()
+    for i in range(len(calls)):
+        callers.add(calls[i][0])
+    for i in range(len(calls)):
+        if calls[i][1] in callers:
+            callers.remove(calls[i][1])
+    for text in texts:
+        if text[0] in callers:
+            callers.remove(text[0])
+        if text[1] in callers:
+            callers.remove(text[1])
+    return sorted(callers)
+callers = telemarketers()
+print("These numbers could be telemarketers: ")
+for caller in callers:
+    print(caller)
 
-def texting(texts):
-    for i in range(len(texts)):
-        if texts[i][0] in arr:
-            arr.remove(texts[i][0])
-        if texts[i][1] in arr:
-            arr.remove(texts[i][1])
-
-receivedCalls(calls)
-texting(texts)
-print("These numbers could be telemarketers:")
-for x in sorted(arr):
-    print(x)
-
-"""
-Worst-Case Big-O Notation:
-Both functions are O(n) as they loop the input, meaning that complexity increases as the size of the size 
-of the input increases.
-"""

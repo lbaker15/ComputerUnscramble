@@ -27,9 +27,3 @@ def cases(texts, calls):
 
 cases(texts, calls)
 
-"""
-Worst-Case Big-O Notation:
-Big O notation would be O(1) as both the declarations and printed messages only need to run once despite whatever input 
-is passed into the function.
-I implemented a constant notation so the runtime doesn't change despite the input
-"""
